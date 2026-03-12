@@ -458,12 +458,15 @@ tw-link {
 (if: $faction is &quot;暮谣见闻社&quot;)[
   (enchant: ?page, (text-colour: #3c3c6d) + (bg: #dee0d7))
   &lt;div class=&quot;story-wrapper&quot;&gt;
-    &lt;div class=&quot;narrative-block&quot;&gt;
-      塔恩：码头就在见闻社的南面 &lt;span class=&quot;coord&quot;&gt;75, -66, -231&lt;/span&gt;，&lt;br&gt;
-      你也可以使用见闻社内的青色共享石碑传送。
+    &lt;div class=&quot;dialogue-block&quot;&gt;
+      &lt;div class=&quot;character-name&quot;&gt;塔恩：&lt;/div&gt;
+      &lt;div class=&quot;speech-content&quot;&gt;
+        码头就在见闻社的南面 &lt;span class=&quot;coord&quot;&gt;75, -66, -231&lt;/span&gt;，&lt;br&gt;
+        你也可以使用见闻社内的青色共享石碑传送。
+      &lt;/div&gt;
     &lt;/div&gt;
 
-    &lt;hr class=&quot;simple-divider&quot;&gt;
+    &lt;hr class=&quot;simple-divider-blue&quot;&gt;
 
     &lt;div class=&quot;choice-container&quot;&gt;
       [[▶ 继续-&gt;初始章]]
@@ -473,9 +476,12 @@ tw-link {
 (else:)[
   (enchant:?page,(text-colour:#151514)+(bg:#dbd19f))
   &lt;div class=&quot;story-wrapper&quot;&gt;
-    &lt;div class=&quot;narrative-block&quot;&gt;
-      杰克：观测点在 &lt;span class=&quot;coord&quot;&gt;-614, 107, 167&lt;/span&gt;，&lt;br&gt;
-      使用底楼的黄色共享石碑就可以直达了！辛苦你啦！
+    &lt;div class=&quot;dialogue-block&quot;&gt;
+      &lt;div class=&quot;character-name&quot;&gt;杰克：&lt;/div&gt;
+      &lt;div class=&quot;speech-content&quot;&gt;
+        观测点在 &lt;span class=&quot;coord&quot;&gt;-614, 107, 167&lt;/span&gt;，&lt;br&gt;
+        使用底楼的黄色共享石碑就可以直达了！辛苦你啦！
+      &lt;/div&gt;
     &lt;/div&gt;
 
     &lt;hr class=&quot;simple-divider-dark&quot;&gt;
@@ -495,29 +501,37 @@ tw-link {
     padding-top: 15vh;
 }
 
-.narrative-block {
-    margin-bottom: 30px;
-    line-height: 1.8;
-    letter-spacing: 0.05em;
+.dialogue-block {
+    margin-bottom: 40px;
 }
 
-/* 坐标高亮：加粗并稍微调整间距，方便玩家查看 */
+.character-name {
+    font-weight: bold;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.speech-content {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
 .coord {
     font-weight: bold;
     letter-spacing: 0px;
     padding: 0 4px;
 }
 
-.simple-divider {
+.simple-divider-blue {
     border: 0;
-    border-top: 1px solid rgba(60, 60, 109, 0.3);
+    border-top: 1px solid rgba(60, 60, 109, 0.2);
     width: 60px;
     margin: 40px auto;
 }
 
 .simple-divider-dark {
     border: 0;
-    border-top: 1px solid rgba(21, 21, 20, 0.3);
+    border-top: 1px solid rgba(21, 21, 20, 0.2);
     width: 60px;
     margin: 40px auto;
 }
